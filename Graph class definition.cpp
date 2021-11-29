@@ -7,7 +7,12 @@ class Graph
   bool* visited;
 
   public:
-    Graph(int vertices);
+    Graph(int vertices)
+    {
+      numberOfVertices = vertices;
+
+      adjacencyLists = new list<int>[vertices];
+    }
 
     void addEdge(int source, int destination);
 
